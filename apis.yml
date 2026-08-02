@@ -1,23 +1,133 @@
 aid: aidash
-name: AiDash
-description: 'AiDash is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AiDASH
+description: 'AiDASH is an AI-first vertical SaaS company that uses satellite imagery
+  and machine learning to run operations, maintenance, and climate-resilience programs
+  for industries with geographically distributed assets — primarily electric and gas
+  utilities, water companies, and landowners. Founded in 2019 by Abhishek Vinod Singh,
+  Rahul Saxena, and Nitin Das and headquartered in San Jose, California with offices
+  in the Washington D.C. metro area and Bengaluru, the company fuses high-resolution
+  multispectral and SAR imagery from commercial satellite constellations with proprietary
+  AI models. Its product line spans the Intelligent Vegetation Management System (IVMS),
+  the Climate Risk Intelligence System (CRIS), the Asset Inspection and Monitoring
+  System (AIMS), Wildfire Mitigation Planning Services (WMPS) and the IRIS wildfire
+  planning platform, and a Biodiversity Net Gain management system (BNGAI). AiDASH
+  markets REST APIs and industry-standard connectors for integrating its intelligence
+  into existing utility systems, but publishes no public developer portal, API reference,
+  or machine-readable contract — the API surface is customer-gated behind commercial
+  engagement. In June 2026 Schneider Electric agreed to acquire approximately 90% of
+  AiDASH at an implied enterprise value of USD 350 million, pending regulatory close.'
+image: https://www.aidash.com/wp-content/uploads/2024/10/AiDash_Logo-orange.png
 url: https://raw.githubusercontent.com/api-evangelist/aidash/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-08-02'
 modified: '2026-08-02'
+x-enrichment:
+  date: '2026-08-02'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
 tags:
 - Company
-apis: []
+- Satellite
+- Artificial Intelligence
+- Geospatial
+- Utilities
+- Energy
+- Vegetation Management
+- Wildfire
+- Climate Risk
+- Asset Management
+- Remote Sensing
+- Vertical SaaS
+apis:
+- aid: aidash:status
+  name: AiDASH Status API
+  description: 'The only public, unauthenticated, machine-readable API surface AiDASH
+    exposes. It is the standard Atlassian Statuspage Status API v2 served from the
+    AiDASH status page, returning JSON for overall status, the four platform
+    components (IVMS, RIMS, ISMS, CRIS), incidents, and scheduled maintenances.
+    AiDASH markets full REST APIs for its intelligence platform, but those are
+    customer-gated and no contract, reference, or portal is published.'
+  humanURL: https://aidash.statuspage.io/
+  baseURL: https://aidash.statuspage.io/api/v2
+  tags:
+  - Status
+  - Monitoring
+  - Operations
+  properties:
+  - type: StatusPage
+    url: https://aidash.statuspage.io/
+  - type: Lifecycle
+    url: lifecycle/aidash-lifecycle.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/aidash-trust-center.yml
+- type: DomainSecurity
+  url: security/aidash-domain-security.yml
+- type: Conformance
+  url: conformance/aidash-conformance.yml
+- type: Lifecycle
+  url: lifecycle/aidash-lifecycle.yml
+- type: StatusPage
+  name: AiDASH Status
+  url: https://aidash.statuspage.io/
+- type: LLMsTxt
+  url: llms/aidash-llms.txt
+- type: WellKnownProbe
+  name: '/.well-known/ probe results (no documents published)'
+  url: well-known/aidash-well-known.yml
 - type: Website
+  url: https://www.aidash.com/
+- type: About
+  url: https://www.aidash.com/about/
+- type: Platform
+  name: AiDASH Platform
+  url: https://www.aidash.com/platform/
+- type: SignUp
+  name: Get a Demo
+  url: https://www.aidash.com/get-a-demo-all/
+- type: Support
+  name: Contact Us
+  url: https://www.aidash.com/contact-us/
+- type: Blog
+  url: https://www.aidash.com/blog/
+- type: BlogRSS
+  url: https://www.aidash.com/feed/
+- type: News
+  url: https://www.aidash.com/news/
+- type: Resources
+  name: Learning Center
+  url: https://www.aidash.com/resources/
+- type: Customers
+  url: https://www.aidash.com/customers/
+- type: Careers
+  url: https://www.aidash.com/careers/
+- type: GitHubOrganization
+  url: https://github.com/aidash
+- type: TermsOfService
+  url: https://www.aidash.com/policy/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://www.aidash.com/policy/privacy-policy/
+- type: Compliance
+  name: Security, Compliance and Responsible AI
+  url: https://www.aidash.com/security-compliance-and-responsible-ai/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aidash
+- type: Twitter
+  url: https://twitter.com/aidashinc
+- type: YouTube
+  url: https://www.youtube.com/channel/UCdU1Xuncxsn0YXY-YigOoJg
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/aidash
+- type: StockMarket
+  name: Forge Global secondary listing
   url: https://forgeglobal.com/aidash_stock/

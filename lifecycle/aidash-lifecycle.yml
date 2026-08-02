@@ -1,0 +1,68 @@
+generated: '2026-08-02'
+method: probed
+source: https://aidash.statuspage.io/
+status_page: https://aidash.statuspage.io/
+status_page_platform: Atlassian Statuspage
+status_page_id: pf2xz12b5znw
+status_page_timezone: Asia/Kolkata
+status_at_probe:
+  indicator: none
+  description: All Systems Operational
+  probed: '2026-08-02'
+components:
+- {name: IVMS, description: Intelligent Vegetation Management System, id: xfkvlbq5bcd9,
+   status: operational}
+- {name: RIMS, description: null, id: km7rrqps7tk9, status: operational}
+- {name: ISMS, description: null, id: 349g8d3djdhq, status: operational}
+- {name: CRIS, description: Climate Risk Intelligence System, id: 8mc3hd1n3s4w,
+   status: operational}
+status_api:
+  base_url: https://aidash.statuspage.io/api/v2
+  spec: Atlassian Statuspage Status API v2 (public, unauthenticated, JSON)
+  spec_docs: https://aidash.statuspage.io/api/v2
+  endpoints:
+  - {path: /api/v2/summary.json, status: 200, content_type: application/json}
+  - {path: /api/v2/status.json, status: 200, content_type: application/json}
+  - {path: /api/v2/components.json, status: 200, content_type: application/json}
+  - {path: /api/v2/incidents.json, status: 200, content_type: application/json}
+  - {path: /api/v2/incidents/unresolved.json, status: 200, content_type: application/json}
+  - {path: /api/v2/scheduled-maintenances.json, status: 200, content_type: application/json}
+  - {path: /api/v2/scheduled-maintenances/upcoming.json, status: 200, content_type: application/json}
+incidents_published: 3
+recent_incidents:
+- {date: '2023-11-14', name: CRIS Application is Down, impact: minor, status: resolved}
+- {date: '2023-11-03', name: CRIS Application - No Data, impact: minor, status: resolved}
+- {date: '2023-11-01', name: ISMS Application Service Down, impact: minor, status: resolved}
+versioning:
+  scheme: unknown
+  note: 'No public API versioning policy. AiDASH markets REST APIs on its platform
+    page but publishes no developer portal, reference, or version policy.'
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No published deprecation or sunset policy was found.
+sla:
+  url: null
+  uptime_target: null
+  note: 'No published SLA. The status page reports 100.0% uptime over the trailing
+    90 days for all four components as of the probe date, but no contractual target
+    is public.'
+changelog:
+  url: null
+  note: 'No public changelog or release notes page. /changelog/ and /release-notes/
+    return 404 on www.aidash.com.'
+deprecated_operations: []
+x-evidence:
+  fetched: '2026-08-02'
+  urls:
+  - {url: 'https://aidash.statuspage.io/', http_status: 200}
+  - {url: 'https://aidash.statuspage.io/api/v2/summary.json', http_status: 200}
+  - {url: 'https://aidash.statuspage.io/api/v2/components.json', http_status: 200}
+  - {url: 'https://aidash.statuspage.io/api/v2/incidents.json', http_status: 200}
+  - {url: 'https://www.aidash.com/changelog/', http_status: 404}
+  - {url: 'https://www.aidash.com/release-notes/', http_status: 404}
+  discovery: 'status.aidash.com does not resolve; the status page was found at the
+    Atlassian-hosted aidash.statuspage.io.'
+notes: 'The status page lists only the acronyms IVMS, RIMS, ISMS, and CRIS. IVMS and
+  CRIS are expanded from names published on aidash.com; RIMS and ISMS are left null
+  because no published expansion was found — they are not guessed here.'
