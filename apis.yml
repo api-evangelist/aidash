@@ -57,6 +57,9 @@ apis:
   tags:
   - Status
   - Monitoring
+  tags_raw:
+  - Status
+  - Monitoring
   - Operations
   properties:
   - type: StatusPage
