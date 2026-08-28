@@ -16,6 +16,17 @@ description: 'AiDASH is an AI-first vertical SaaS company that uses satellite im
   or machine-readable contract — the API surface is customer-gated behind commercial
   engagement. In June 2026 Schneider Electric agreed to acquire approximately 90% of
   AiDASH at an implied enterprise value of USD 350 million, pending regulatory close.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.aidash.com/wp-content/uploads/2024/10/AiDash_Logo-orange.png
 url: https://raw.githubusercontent.com/api-evangelist/aidash/refs/heads/main/apis.yml
 x-type: company
