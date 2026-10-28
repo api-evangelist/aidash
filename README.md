@@ -64,46 +64,92 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AiDASH is an AI-first vertical SaaS company that uses satellite imagery and machine learning to run
-operations, maintenance, and climate-resilience programs for industries with geographically distributed
-assets — primarily electric and gas utilities, water companies, and landowners. Founded in 2019 and
-headquartered in San Jose, California, with offices in the Washington D.C. metro area and Bengaluru.
+AiDASH is an AI-first vertical SaaS company that uses satellite imagery and machine learning to run operations, maintenance, and climate-resilience programs for industries with geographically distributed assets — primarily electric and gas utilities, water companies, and landowners. Founded in 2019 by Abhishek Vinod Singh, Rahul Saxena, and Nitin Das and headquartered in San Jose, California with offices in the Washington D.C. metro area and Bengaluru, the company fuses high-resolution multispectral and SAR imagery from commercial satellite constellations with proprietary AI models. Its product line spans the Intelligent Vegetation Management System (IVMS), the Climate Risk Intelligence System (CRIS), the Asset Inspection and Monitoring System (AIMS), Wildfire Mitigation Planning Services (WMPS) and the IRIS wildfire planning platform, and a Biodiversity Net Gain management system (BNGAI). AiDASH markets REST APIs and industry-standard connectors for integrating its intelligence into existing utility systems, but publishes no public developer portal, API reference, or machine-readable contract — the API surface is customer-gated behind commercial engagement. In June 2026 Schneider Electric agreed to acquire approximately 90% of AiDASH at an implied enterprise value of USD 350 million, pending regulatory close.
 
-- Website — https://www.aidash.com/
-- Platform — https://www.aidash.com/platform/
-- GitHub — https://github.com/aidash
-- Trust Center — https://security.aidash.com/
-- Status — https://aidash.statuspage.io/
+**Areas:** Company · Satellite · Artificial Intelligence · Geospatial · Utilities · Energy · Vegetation Management · Wildfire · Climate Risk · Asset Management · Remote Sensing · Vertical SaaS
 
-## API surface
+## AiDASH on APIs.io
 
-AiDASH markets "secure, full REST APIs" and industry-standard connectors on its platform page, but
-publishes **no public developer portal, API reference, getting-started guide, or machine-readable
-contract**. Contract discovery was run against every reachable host (`www.aidash.com`,
-`iris.aidash.com`, `connect.aidash.com`, plus hosts discovered via DNS and certificate transparency)
-for OpenAPI/Swagger, GraphQL introspection, MCP `tools/list`, and A2A agent cards — all missed. The
-product API is customer-gated behind commercial engagement.
+Everything profiled for AiDASH is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aidash/](https://apis.io/providers/aidash/)** — or go straight to one of the APIs or properties below.
 
-The one public, unauthenticated, machine-readable surface is the Atlassian Statuspage **Status API v2**
-at `https://aidash.statuspage.io/api/v2`, covering the IVMS, RIMS, ISMS, and CRIS components.
+### APIs (1)
 
-## Artifacts
+- [AiDASH Status API](https://apis.io/apis/aidash/status/) — The only public, unauthenticated, machine-readable API surface AiDASH exposes. It is the standard Atlassian Statuspage Status API v2 served from the AiDASH…
 
-| Path | Type | Method |
-|---|---|---|
-| `llms/aidash-llms.txt` | LLMsTxt | searched (verbatim from `https://www.aidash.com/llms.txt`) |
-| `lifecycle/aidash-lifecycle.yml` | Lifecycle + StatusPage | probed |
-| `security/aidash-trust-center.yml` | TrustCenter | searched |
-| `security/aidash-domain-security.yml` | DomainSecurity | probed |
-| `conformance/aidash-conformance.yml` | Conformance | searched |
-| `well-known/aidash-well-known.yml` | probe record (nothing published) | probed |
+### Published properties
 
-## Notes
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- SOC 2 Type 2, a public SOC 3 report, and a CSA STAR Level 1 (CAIQ) self-assessment are published;
-  no ISO 27001, HIPAA, PCI DSS, or FedRAMP.
-- No `security.txt`, no published vulnerability-disclosure contact, and no bug-bounty program.
-- No status subdomain (`status.aidash.com` does not resolve) — the status page lives at
-  `aidash.statuspage.io`.
-- In June 2026 Schneider Electric agreed to acquire ~90% of AiDASH at an implied enterprise value of
-  USD 350 million, pending regulatory close.
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aidash Domain Security](https://apis.io/security/aidash/aidash-domain-security/)
+- [Aidash Trust Center](https://apis.io/security/aidash/aidash-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.aidash.com/)
+- [Sign up](https://www.aidash.com/get-a-demo-all/)
+- [Support](https://www.aidash.com/contact-us/)
+- [Blog](https://www.aidash.com/blog/)
+- [Compliance](https://www.aidash.com/security-compliance-and-responsible-ai/)
+- [Terms of service](https://www.aidash.com/policy/terms-and-conditions/)
+- [Privacy policy](https://www.aidash.com/policy/privacy-policy/)
+- [GitHub](https://github.com/aidash)
+- [Status](https://aidash.statuspage.io/)
+
+## API Evangelist rating
+
+**Kin Score 24.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 74.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 50.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.5** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aidash/](https://apis.io/providers/aidash/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AiDASH: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aidash/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
